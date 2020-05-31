@@ -4,7 +4,7 @@
 class Meal ():
     def __init__(self, name, ingredients):
         self.name = name
-        self.ingredients = ingredients
+        self.ingredients = {'ingredients' : ingredients}
 
     def __str__(self):
         return f"Aby wykonać {self.name}, musisz kupić {self.ingredients}"
@@ -28,5 +28,6 @@ class Snack (Meal):
         self.tags = ['snack', 'appetizer', 'starter', 'between meals']
 
 
-scrambled_eggs = Non_dinner('jajecznica', ['jajko', 'masło', 'bekon'])
-print(scrambled_eggs)
+class Shopping_list():
+    def __init__(self):
+        self.list = []
