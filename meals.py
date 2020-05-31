@@ -20,12 +20,12 @@ dinners = [spaghetti, fish_and_chips]
 week = ["Pon", 'Wt', 'Śr', 'Czw', 'Pt', 'Sob', 'Nd']
 
 for day in week:
-    if day == 'Pon':
+    if day:
         breakfast = random.choice(non_dinners)
         dinner = random.choice(dinners)
         supper = random.choice(non_dinners)
         if breakfast == supper:
-            supper = random.random(non_dinners)
+            supper = random.choice(non_dinners)
         print (f"""Twój jadłospis na {day} to {breakfast}, {dinner}, {supper}.
 Musisz kupić 
 {breakfast.get_ingr},
