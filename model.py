@@ -4,10 +4,14 @@
 class Meal ():
     def __init__(self, name, ingredients):
         self.name = name
-        self.ingredients = {'ingredients' : ingredients}
+        self.ingredients = ingredients
 
     def __str__(self):
-        return f"Aby wykonać {self.name}, musisz kupić {self.ingredients}"
+        return self.name
+
+    @property
+    def get_ingr(self):
+        return self.ingredients
 
 
 class Dinner(Meal):
