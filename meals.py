@@ -36,8 +36,12 @@ import csv
 # {supper.get_ingr}""")
 
 with open("non_dinners.csv", "r+") as file:
-    reader = csv.DictReader(file)
-    counter =1
+    reader = csv.reader(file)
+    counter = 1
     for row in reader:
-        meal+row = Non_dinner(name=row['Name'])
+        meal = Non_dinner(name=row['Name'], ingredients=row['Ingr1'])
+        non_dinners = []
+        non_dinners.append(meal)
+        counter += 1
 
+print(non_dinners)
